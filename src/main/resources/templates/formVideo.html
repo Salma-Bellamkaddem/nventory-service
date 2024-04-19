@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html    lang="en" xmlns:th="http://www.thymeleaf.org"
+         xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+         layout:decorate="template"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>formsVideo</title>
+    <!-- Bootstrap CSS -->
+    <link href="/webjars/bootstrap/5.3.3/css/bootstrap.min.css"  type="text/css" rel="stylesheet">
+
+</head>
+<body>
+<div layout:fragment="content1">
+    <div class="col-md-6 colm offset-3">
+        <form method="post"  th:action="@{save}">
+
+            <div >
+                <label for="nom" >Nom</label>
+                <input id="nom" class="form-control" type="text" name="nom" th:value="${Video.name}">
+
+            </div>
+            <div >
+                <label for="url" >URL</label>
+                <input id="url" class="form-control " type="text" name="url" th:value="${Video.url}">
+
+            </div>
+            <div >
+                <label for="description" >Description</label>
+                <input id="description" class="form-control" type="text" name="description" th:value="${Video.description}">
+
+            </div>
+            <div >
+                <label for="Date" >Date</label>
+                <input id="Date" class="form-control" type="date" name="date" th:value="${Video.datePublication}">
+
+            </div>
+            <div >
+                <label  >Creator</label>
+                <input  class="form-control" type="number" name="date" th:value="${Video.creator}">
+
+            </div>
+            <button  type="submit" class="btn btn-primary">Save</button>
+
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>
